@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8" />
+  <title>Shop – Add product</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      text-align: center;
+      padding: 50px;
+    }
+
+    h1 {
+      color: #333;
+    }
+
+    form {
+      display: inline-block;
+      background: #fff;
+      padding: 20px 30px;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+
+    input, textarea {
+      width: 300px;
+      padding: 10px;
+      margin: 10px 0;
+      font-size: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    button {
+      padding: 10px 20px;
+      font-size: 1rem;
+      background: #007BFF;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: #0056b3;
+    }
+
+    nav {
+      margin-top: 30px;
+    }
+
+    a {
+      margin: 0 10px;
+      text-decoration: none;
+      color: #007BFF;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <h1>Add product</h1>
+  <form method="POST" action="/product/add">
+    <input type="text" name="name" placeholder="Product name" required />
+    <textarea name="description" placeholder="Description" required></textarea>
+    <br />
+    <button type="submit">Add Product</button>
+  </form>
+  <nav>
+    <a href="/">Home</a>
+    <a href="/product/new">Newest product</a>
+    <a href="/logout">Logout</a>
+  </nav>
+</body>
+</html>

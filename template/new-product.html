@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8" />
+  <title>Shop – Newest product</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      text-align: center;
+      padding: 50px;
+    }
+
+    h1 {
+      color: #333;
+    }
+
+    .product {
+      background: white;
+      display: inline-block;
+      padding: 20px 40px;
+      margin-top: 20px;
+      border-radius: 10px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.15);
+      font-size: 1.1rem;
+    }
+
+    nav {
+      margin-top: 30px;
+    }
+
+    a {
+      margin: 0 10px;
+      text-decoration: none;
+      color: #007BFF;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <h1>Newest product</h1>
+  <div class="product">
+    <p>{{product}}</p>
+  </div>
+  <nav>
+    <a href="/">Home</a>
+    <a href="/product/add">Add product</a>
+    <a href="/logout">Logout</a>
+  </nav>
+</body>
+</html>

@@ -8,3 +8,14 @@
 
 // 🏗 Uruchom serwer na porcie PORT.
 // Podpowiedź: server.listen(???);
+
+
+const http = require('http');
+const config = require('./config');
+const requestRouting = require('./routing/routing');
+
+const server = http.createServer(requestRouting)
+
+server.listen(config.PORT, () => {
+    console.log("Server works on http://localhost:" + config.PORT)
+})

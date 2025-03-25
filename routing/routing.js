@@ -14,3 +14,21 @@
 //  };
 
 // 🔧 Wyeksportuj funkcję 'requestRouting', aby inne moduł mogły jej używać.
+const homeRouting = require("./home");
+const productRouting = require("./product");
+const logoutRouting = require("./logout");
+const STATUS_CODE = require("../constants/statusCode");
+
+const requestRouting = (request, response) => {
+    const { url, method } = request;
+
+    if(url === '/'){
+        return homeRouting(request, response);
+    }else if(url.startsWith("/product")){
+        return productRouting(request, response);
+    }else if(url.startsWith("/logout")){
+        return logoutRouting(request, response)
+    }
+}
+
+module.exports = requestRouting;
